@@ -113,7 +113,7 @@
                 />
               </svg>
 
-              Profile
+              Profilo
             </a>
           </li>
           <!-- Menu Item Profile -->
@@ -158,7 +158,7 @@
                 </defs>
               </svg>
 
-              Settings
+              Impostazioni
             </a>
           </li>
           <!-- Menu Item Settings -->

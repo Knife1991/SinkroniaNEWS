@@ -13,7 +13,7 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::orderBy('created_at', 'desc')->get();
-
+        
         return view('welcome', compact('news'));      
     }
     
@@ -55,7 +55,7 @@ class NewsController extends Controller
     public function show(string $id)
     {
         $news = News::findOrFail($id);
-
+        
         return view('news/show-news', compact('news'));
     }
     
@@ -64,8 +64,12 @@ class NewsController extends Controller
     */
     public function edit(string $id)
     {
-        //
+        
+        $newsItem = News::findOrFail($id);
+        
+        return view('news.edit-news', compact('newsItem'));
     }
+    
     
     /**
     * Update the specified resource in storage.
