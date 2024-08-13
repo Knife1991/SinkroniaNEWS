@@ -1,0 +1,7 @@
+@import 'bootstrap-icons';
+@import './main.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
