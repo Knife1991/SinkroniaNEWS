@@ -241,6 +241,10 @@
               <x-map-01 :news="$news" />
               <!-- ====== Map One End -->
 
+              <!-- ====== Map One Start -->
+              <x-map-02 :categories="$categories" />
+              <!-- ====== Map One End -->
+
               
             </div>
           </div>

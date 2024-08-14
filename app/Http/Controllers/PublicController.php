@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -20,8 +21,20 @@ class PublicController extends Controller
 
         $news = News::all();
 
-        return view('index', compact('totalNews', 'totalUser', 'news'));
+        $categories = Category::all();
+
+        return view('index', compact('totalNews', 'totalUser', 'news', 'categories'));
     }
     
-    
+    public function profilo(){
+
+        return view('profile');
+
+    }
+
+    public function settings(){
+
+        return view('settings');
+
+    }
 }

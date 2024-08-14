@@ -1,7 +1,6 @@
 <x-layout>
-  
   <div class="min-h-screen flex items-center justify-center mt-5">
-    <form action="{{route('store.news')}}" method="POST" enctype="multipart/form-data" class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
+    <form action="{{ route('store.news') }}" method="POST" enctype="multipart/form-data" class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
       @csrf
       <div class="space-y-12">
         <div class="border-b border-gray-900/10 pb-12">
@@ -50,12 +49,16 @@
             <div class="sm:col-span-4">
               <label for="category" class="block text-sm font-medium leading-6 text-gray-900">Categoria</label>
               <div class="mt-2">
-                <select id="category" name="category" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                  <option>Seleziona una categoria</option>
-                  <option>Categoria 1</option>
-                  <option>Categoria 2</option>
-                  <option>Categoria 3</option>
-                </select>
+                @if ($categories->isEmpty())
+                  <p class="text-sm text-gray-600">Non ci sono categorie al momento.</p>
+                @else
+                  <select id="category" name="category_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                    <option value="" disabled selected>Seleziona una categoria</option>
+                    @foreach ($categories as $category)
+                      <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                  </select>
+                @endif
               </div>
             </div>
           </div>
@@ -94,5 +97,4 @@
       reader.readAsDataURL(file);
     }
   </script>
-  
 </x-layout>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | TailAdmin - Tailwind CSS Admin Dashboard Template</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
   <body
@@ -15,7 +16,7 @@
     :class="{'dark text-bodydark bg-boxdark-2': darkMode === true}"
   >
     <!-- ===== Preloader Start ===== -->
-    <x-preloader></x-preloader>
+    {{-- <x-preloader></x-preloader> --}}
     <!-- ===== Preloader End ===== -->
 
     <!-- ===== Page Wrapper Start ===== -->
@@ -41,13 +42,13 @@
                 class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
               >
                 <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                  Profile
+                  Profilo
                 </h2>
 
                 <nav>
                   <ol class="flex items-center gap-2">
                     <li>
-                      <a class="font-medium" href="index.html">Dashboard /</a>
+                      <a class="font-medium" href="{{route('dashboard')}}">Dashboard /</a>
                     </li>
                     <li class="text-primary">Profile</li>
                   </ol>
@@ -149,9 +150,9 @@
                     <h3
                       class="mb-1.5 text-2xl font-medium text-black dark:text-white"
                     >
-                      Danish Heilium
+                      {{Auth::user()->name}}
                     </h3>
-                    <p class="font-medium">Ui/Ux Designer</p>
+                    <p class="font-medium">Junio Web Developer</p>
                     <div
                       class="mx-auto mb-5.5 mt-4.5 grid max-w-94 grid-cols-3 rounded-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]"
                     >
@@ -186,11 +187,7 @@
                         About Me
                       </h4>
                       <p class="mt-4.5 text-sm font-normal">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque posuere fermentum urna, eu condimentum
-                        mauris tempus ut. Donec fermentum blandit aliquet. Etiam
-                        dictum dapibus ultricies. Sed vel aliquet libero. Nunc a
-                        augue fermentum, pharetra ligula sed, aliquam lacus.
+                        Sta affrontando una sfida con framework mai affrontati prima... ma il motto é: "Soldi e paura mai avuti"...
                       </p>
                     </div>
 
@@ -363,5 +360,6 @@
       <!-- ===== Content Area End ===== -->
     </div>
     <!-- ===== Page Wrapper End ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </body>
 </html>

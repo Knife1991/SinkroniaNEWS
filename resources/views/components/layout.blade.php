@@ -8,7 +8,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-col min-h-screen">
-    <x-navbar/>
+
+    <x-navbar :categories="$categories"/>
 
     <main class="flex-grow">
         {{ $slot }}

@@ -14,7 +14,7 @@
         <div class="flex gap-2">
           <a href="{{ route('news.show', $news->id) }}" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Visualizza</a>
           <a href="{{route('news.edit', $news->id)}}" class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">Modifica</a>
-          <form action="" method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare questa notizia?');">
+          <form action="{{route('news.destroy', $news->id)}}" method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare questa notizia?');">
             @csrf
             @method('DELETE')
             <button type="submit" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Elimina</button>

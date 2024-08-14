@@ -13,6 +13,7 @@ class News extends Model
         'title',
         'body',
         'img',
+        'category_id'
     ];
 
     public function category(){

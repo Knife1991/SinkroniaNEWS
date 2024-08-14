@@ -51,7 +51,7 @@
           <li>
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-              href="#"
+              href="{{route('dashboard')}}"
               @click.prevent="selected = (selected === 'Dashboard' ? '' : 'Dashboard')"
               :class="{ 'bg-graydark dark:bg-meta-4': selected === 'Dashboard' }"
             >
@@ -90,7 +90,7 @@
           <li>
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-              href="profile.html"
+              href="{{route('profilo')}}"
               @click="selected = (selected === 'Profile' ? '':'Profile')"
               :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Profile') && (page === 'profile') }"
               :class="page === 'profile' && 'bg-graydark'"
@@ -123,7 +123,7 @@
           <li>
             <a
               class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-              href="settings.html"
+              href="{{route('settings')}}"
               @click="selected = (selected === 'Settings' ? '':'Settings')"
               :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Settings') && (page === 'settings') }"
               :class="page === 'settings' && 'bg-graydark'"

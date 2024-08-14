@@ -221,7 +221,7 @@
             <span class="block text-sm font-medium text-black dark:text-white"
               >{{ Auth::user()->name }}</span
             >
-            <span class="block text-xs font-medium">UX Designer</span>
+            <span class="block text-xs font-medium">Junior Web Developer</span>
           </span>
 
           <span class="h-12 w-12 rounded-full">
@@ -256,7 +256,7 @@
           >
             <li>
               <a
-                href="profile.html"
+                href="{{route('profilo')}}"
                 class="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
               >
                 <svg

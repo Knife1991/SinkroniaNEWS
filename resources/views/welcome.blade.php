@@ -1,4 +1,5 @@
-<x-layout>
+<x-layout :categories="$categories">
+
     <div class="container mx-auto px-4">
         <!-- Sezione del titolo -->
         <div class="flex justify-between items-center my-8">
