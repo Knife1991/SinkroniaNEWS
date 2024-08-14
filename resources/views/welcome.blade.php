@@ -18,7 +18,7 @@
                         $mainArticle = $news->first();
                     @endphp
                     <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img class="w-full h-65 object-cover" src="{{ asset('storage/' . $mainArticle->img) }}" alt="{{ $mainArticle->title }}">
+                        <img class="w-full h-100 object-cover" src="{{ asset('storage/' . $mainArticle->img) }}" alt="{{ $mainArticle->title }}">
                         <div class="p-6">
                             <h2 class="text-2xl font-bold mb-2">{{ $mainArticle->title }}</h2>
                             <p class="text-gray-700">{{ Str::limit($mainArticle->body, 150) }}</p>
